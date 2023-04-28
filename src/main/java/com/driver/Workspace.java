@@ -21,6 +21,14 @@ public class Workspace extends Gmail{
               calendar.add(meeting);
     }
 
+    public ArrayList<Meeting> getCalendar() {
+        return calendar;
+    }
+
+    public void setCalendar(ArrayList<Meeting> calendar) {
+        this.calendar = calendar;
+    }
+
     public int findMaxMeetings() {
 
         // find the maximum number of meetings you can attend
