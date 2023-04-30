@@ -8,7 +8,7 @@ import java.util.Collections;
 
 public class Workspace extends Gmail{
 
-    private ArrayList<Meeting> calendar; // Stores all the meetings
+    private ArrayList<Meeting> calendar; // Stores all the mleetings
 
     public Workspace(String emailId) {
         // The inboxCapacity is equal to the maximum value an integer can store.
@@ -37,7 +37,7 @@ public class Workspace extends Gmail{
         // Example: If a meeting ends at 10:00 am, you cannot attend another meeting starting at 10:00 am
         if(calendar.size()==0) return 0;
         Collections.sort(calendar, (a, b) -> {
-                    return a.getStartTime().isAfter(b.getStartTime())== true? 1:-1;
+                    return a.getEndTime().isAfter(b.getEndTime())== true? 1:-1;
                 }
         );
 //        for (Meeting m:calendar) {
